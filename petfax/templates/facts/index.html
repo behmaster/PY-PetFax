@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Facts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <div class="container">
+    <h2>Pet facts</h2>
     {% for fact in facts %}
-        <h3>{{ fact.description }}</h3>
+        <hr class="solid">
+        <h3>{{ fact.title }}</h3>
+        <h4>Author: {{ fact.author }}</h4>
+        <p>{{ fact.fact }}</p>
     {% endfor %}
+    </div>
 </body>
 </html>

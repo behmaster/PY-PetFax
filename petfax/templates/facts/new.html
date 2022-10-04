@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spittin' Facts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <form action="/facts" method="POST">
-        <label>Fact Title</label>
-        <input
-            type="text"
-            name="title"
-            id="title"
-            required
-          />
-          <label>Fact Details</label>
-        <input
-            type="text"
-            name="details"
-            id="details"
-            required
-          />
-          <label>Author</label>
-        <input
-            type="text"
-            name="author"
-            id="author"
-            required
-          />
-    </form>
+  <div class="container">
+      <H1>Submit Fax</H1>
+      <div class="callout">
+          If you have some fun animal facts you'd like to share, please submit them! We may use them in the future.
+      </div>
+      <div class="facts-container">
+        <form action="/facts" method="POST">
+          <label>Fact Title</label>
+          <input
+              type="text"
+              name="title"
+              id="title"
+              required
+            />
+            <label>Fact Details</label>
+          <input
+              type="text"
+              name="fact"
+              id="fact"
+              required
+            />
+            <label>Author</label>
+          <input
+              type="text"
+              name="author"
+              id="author"
+              required
+            />
+            <input type="submit" value="Submit the Fact">
+        </form>
+      </div>
+      <a href="/pets">⟨　Go back</a>
+  </div>
 </body>
 </html>
+
+
+
+
+
